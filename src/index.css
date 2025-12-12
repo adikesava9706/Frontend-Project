@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg:#f4fdff;
+  --card:#e9fbff;
+  --accent:#0f6b74;
+  --muted:#6b7280;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+#root{
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#f7feff 0%, #f0fbfd 100%);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color:#07393b;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.app-container{
+  width:80vw;
+  height:80vh;
+  margin:0 auto;
+  padding:48px 56px;
+  background: rgba(255,255,255,0.7);
+  border-radius:28px;
+  box-shadow: 0 8px 30px rgba(10, 40, 45, 0.06);
+  overflow-y:auto;
+}
+
+h1{
+  font-family: 'DM Serif Display', serif;
+  font-weight:400;
+  font-size:90px;
+  font-style:italic;
+  text-align:center;
+  line-height:auto;
+  letter-spacing:-4px;
+  background: linear-gradient(90deg, #15313D, #3CABDA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 12px 0;
+}
+
+.subtitle{
+  display:block;
+  margin:0 auto 28px auto;
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  padding:8px 16px;
+  border-radius:8px;
+  font-size:14px;
+  color:var(--muted);
+  text-align:center;
+}
+
+.question-card{
+  background: linear-gradient(180deg, #e6fbff 0%, #f7feff 100%);
+  border-radius:12px;
+  padding:18px;
+  margin:26px 0;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+  text-align: center;
+}
+
+.question-card h3{margin:0 0 8px 0}
+
+.options{margin-top:18px}
+.option{
+  display:block;
+  padding:18px 20px;
+  margin:12px 0;
+  border-radius:10px;
+  background: rgba(255,255,255,0.85);
+  cursor:pointer;
+  border:1px solid rgba(10,30,35,0.04);
+  text-align:center;
+  font-weight:600;
+  color:#08363a;
+}
+.option:hover{background:#eefbfd}
+.option.selected{background: linear-gradient(90deg,#cfeff6,#dff7fb); border-color:#bfeef0}
+.option input{display:none}
+
+.controls{display:flex;gap:12px;justify-content:flex-end;margin-top:18px}
+.controls button{padding:10px 14px;border-radius:8px;border:none;background:#e6fbff;cursor:pointer}
+.controls button:disabled{opacity:0.45;cursor:not-allowed}
+
+.centered{ text-align:center }
+
+@media (max-width:640px){
+  .app-container{padding:28px 20px;margin:20px}
+  h1{font-size:40px}
+}
