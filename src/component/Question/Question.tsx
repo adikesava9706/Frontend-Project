@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Question(props:any) {
   const { data, selected, onSelect, qIndex } = props
 
